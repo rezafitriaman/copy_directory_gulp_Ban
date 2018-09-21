@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	  <script src="dynamicdata.js"></script>
+   </head>
+   <body>
+   <div class="banner">
+		<script>
+				//Voor debug console meldingen gebruik de functie "showDebug()" in console
+				//Of zet de var autoshowDebug op true in dynamicdata.js voor automatische debugging
+				var bannerErrors = {error: []	}; 
+				function showDebug(){
+				    for(var i=0;i < bannerErrors.error.length;i++){
+						var error = bannerErrors.error[i];
+					}
+				}
+				//Show debug functie koppelen aan browser window
+				window.showDebug = showDebug;
+				//Banne ropzetten
+				function buildBanner()
+				{
+				   	$('<link rel="stylesheet" type="text/css" href="flickity.css">').appendTo('head');
+					$('<link rel="stylesheet" type="text/css" href="style.css">').appendTo('head');
+					$( ".banner" ).load( "gstar.html" );
+					$.getScript("actions.js");
+					$.getScript( "animation.js");		
+					
+					//Autodebug functie
+					if(development == true && autoshowDebug == true)
+					{
+								setTimeout(showDebug, 1000);
+					}
+				}		
+				buildBanner();
+			
+		</script>
+	</div>
+	<script src="flickity.pkgd.min.js"></script>
+	<script src = "jquery.textfill.min.js"> </script>
+   </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "copy_dir_banner",
+  "version": "1.0.0",
+  "description": "copy all map",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "file-exists": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-file": "^0.4.0",
+    "gulp-image": "^4.3.0",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-wait": "^0.0.2",
+    "gulp-string-replace": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezafitriaman/copy_directory_gulp_Ban.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezafitriaman/copy_directory_gulp_Ban/issues"
+  },
+  "homepage": "https://github.com/rezafitriaman/copy_directory_gulp_Ban#readme"
+}

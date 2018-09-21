@@ -1,0 +1,93 @@
+<div id="background1" class="background">
+	<img  src="background.jpg"class="background1img"> </img>
+ </div>
+<div id="videobg" class="background"> </div>
+<div class="theme1WhiteTop">
+</div>
+<div class="theme1WhiteBottom">
+</div>
+<div id="bg-exit" class="border"> </div>
+<div class="logoWrapper"> <img class="logo"src="logo_black.svg"> </img> </div>
+<div class="copy1Wrapper"> 
+	<p class="copy1">Dynamic content </p>
+</div>
+<div class="ctaWrapper"> 
+	<div id="cta"class="cta">
+		<span class="ctaText">cta </span>
+	</div>
+</div>
+<script>
+//BANNER WIDTH & HEIGHT-
+var w = '640px';
+var h = '100px';
+//SLIDER IMG SIZE & MARGIN
+var slider_img_size = '60px';
+var slider_img_top_margin = '0px';
+var slider_navigationBottom = 3;
+//ZOOMOUT ANIMATION
+var ZoomOutX = 20;
+var ZoomOutY = 20;
+//ZOOMIN ANIMATION
+var ZoomInX = 20;
+var ZoomInY = 20;
+
+//ZOOMOUT ANIMATION
+var ZoomOutXT1 = 0;
+var ZoomOutYT1 = 10;
+//ZOOMIN ANIMATION
+var ZoomInXT1 = 0;
+var ZoomInYT1 = 25;
+
+//LOGO WIDTH
+var logoWidth = 155;
+//THEME1
+var theme1Height = 100;
+var theme1Width = 155;
+//THEME1 BLOCK1
+	var theme1Block1Left = 0;
+	var theme1Block1Top = 0;
+	var theme1Block1Bottom = 0;
+//THEME1 BLOCK2
+	var theme1Block2Right = 0;
+	var theme1Block2Bottom = 0;
+//CTA
+var ctaBottom = 8;
+var cta_hidden = false;
+var cta_width = 100;
+var cta_minWidth = 100;
+var cta_maxWidth = 150;
+var cta_height = 30;
+var cta_text_top = 5;
+//COPY1
+var copy1Width = 145;
+var copy1Top = -8;
+var copy1Right= 0;
+var copy1Fontsize = 20;
+var padding = 5;
+
+
+	//DYNAMIC BINDINGS
+	$('body, .banner').css({'width' : w,'height' : h});
+	$('.logo').css('width',logoWidth);
+	$('.theme1WhiteTop').css({'height' : theme1Height,'width' : theme1Width,'left' : theme1Block1Left,'top' : theme1Block1Top, 'bottom' : theme1Block1Bottom });
+	$('.theme1WhiteBottom').css({'height' : theme1Height,'width' : theme1Width,'right' : theme1Block2Right,'bottom' : theme1Block2Bottom });
+	$('.ctaWrapper').css('bottom',ctaBottom);
+	$('.cta').css('width', cta_width);
+	$('.cta').css('min-width', cta_minWidth);
+	$('.cta').css('max-width', cta_maxWidth);
+	$('.cta').css('height', cta_height);
+	$('.ctaText').css('top', cta_text_top);
+	if(cta_hidden == true){$('.ctaWrapper').hide()};
+	$('.copy1Wrapper').css({'width' : copy1Width, 'top' : copy1Top, 'padding' : padding});
+	$('.copy1').css('font-size',copy1Fontsize);
+
+	
+		setInterval(function(){
+		$('#cta').textfill({
+					maxFontPixels: 13,
+					minFontPixels: 11
+				}); 
+	}, 100);
+	
+	
+</script>

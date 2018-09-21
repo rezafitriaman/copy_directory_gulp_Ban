@@ -1,0 +1,91 @@
+<div id="background1" class="background">
+	<img  src="background.jpg"class="background1img"> </img>
+ </div>
+<div id="videobg" class="background"> </div>
+<div class="theme1WhiteTop">
+</div>
+<div class="theme1WhiteBottom">
+</div>
+<div id="bg-exit" class="border"> </div>
+<div class="logoWrapper"> <img class="logo"src="logo_black.svg"> </img> </div>
+<div class="copy1Wrapper"> 
+	<p class="copy1">Dynamic content </p>
+</div>
+<div class="ctaWrapper"> 
+	<div id="cta"class="cta">
+		<span class="ctaText">cta </span>
+	</div>
+</div>
+<script>
+//BANNER WIDTH & HEIGHT-
+var w = '300px';
+var h = '250px';
+//SLIDER IMG SIZE & MARGIN
+var slider_img_size = '100px';
+var slider_img_top_margin = '55px';
+var slider_navigationBottom = 1;
+//ZOOMOUT ANIMATION
+var ZoomOutX = 40;
+var ZoomOutY = 60;
+//ZOOMIN ANIMATION
+var ZoomInX = 0;
+var ZoomInY = 60;
+
+//ZOOMOUT ANIMATION
+var ZoomOutXT1 = 0;
+var ZoomOutYT1 = 10;
+//ZOOMIN ANIMATION
+var ZoomInXT1 = 0;
+var ZoomInYT1 = 25;
+
+//LOGO WIDTH
+var logoWidth = 180;
+//THEME1
+var theme1HeightTop = 49;
+var theme1WidthTop = 300;
+var theme1HeightBottom = 90;
+var theme1WidthBottom = 300;
+//THEME1 BLOCK1
+	var theme1Block1Left = 0;
+	var theme1Block1Top = 0;
+	var theme1Block1Bottom = 0;
+//THEME1 BLOCK2
+	var theme1Block2Right = 0;
+	var theme1Block2Bottom = 0;
+//CTA
+var ctaBottom = 8;
+var cta_hidden = false;
+var cta_minWidth = 123;
+var cta_maxWidth = 123;
+var cta_width = 100;
+var cta_height = 30;
+var cta_text_top = 5;
+//COPY1
+var copy1Width = 290;
+var copy1Top = 142;
+var copy1Left = 0;
+var copy1Fontsize = 24;
+var padding = 5;
+
+	//DYNAMIC BINDINGS
+	$('body, .banner').css({'width' : w,'height' : h});
+	$('.logo').css('width',logoWidth);
+	$('.theme1WhiteTop').css({'height' : theme1HeightTop,'width' : theme1WidthTop,'left' : theme1Block1Left,'top' : theme1Block1Top, 'bottom' : theme1Block1Bottom });
+	$('.theme1WhiteBottom').css({'height' : theme1HeightBottom,'width' : theme1WidthBottom,'right' : theme1Block2Right,'bottom' : theme1Block2Bottom });
+	$('.ctaWrapper').css('bottom',ctaBottom);
+	$('.cta').css('min-width', cta_minWidth);
+	$('.cta').css('max-width', cta_maxWidth);
+	$('.cta').css('height', cta_height);
+	$('.ctaText').css('top', cta_text_top);
+	if(cta_hidden == true){$('.ctaWrapper').hide()};
+	$('.copy1Wrapper').css({'width' : copy1Width, 'top' : copy1Top, 'left' : copy1Left, 'padding' : padding});
+	$('.copy1').css('font-size',copy1Fontsize);
+	
+	setInterval(function(){
+		$('#cta').textfill({
+					maxFontPixels: 13,
+					minFontPixels: 11
+				}); 
+	}, 100);
+	
+</script>
